@@ -1,22 +1,71 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, graphql, useStaticQuery } from "gatsby"
+
+//import "./navagation.module.scss"
+import NavStyles from "./navagation.module.scss"
 
 const Nav = () => {
+  const data = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+    }
+  `)
   return (
-    <navbar style={{ display: `flex`, justifyContent: `space-around` }}>
+    <header className={NavStyles.header}>
+      <h1>
+        <Link
+          className={NavStyles.title}
+          activeClassName={NavStyles.activeClassName}
+          to="/"
+        >
+          {data.site.siteMetadata.title}
+        </Link>
+      </h1>
       <nav>
-        <Link to="/">Home</Link>
+        <ul className={NavStyles.navList}>
+          <li>
+            <Link
+              className={NavStyles.navItem}
+              activeClassName={NavStyles.activeClassName}
+              to="/"
+            >
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={NavStyles.navItem}
+              activeClassName={NavStyles.activeClassName}
+              to="/blog"
+            >
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={NavStyles.navItem}
+              activeClassName={NavStyles.activeClassName}
+              to="/about"
+            >
+              About
+            </Link>
+          </li>
+          <li>
+            <Link
+              className={NavStyles.navItem}
+              activeClassName={NavStyles.activeClassName}
+              to="/contact"
+            >
+              Contact{" "}
+            </Link>
+          </li>
+        </ul>
       </nav>
-      <nav>
-        <Link to="/blog">Blog</Link>
-      </nav>
-      <nav>
-        <Link to="/about">About</Link>
-      </nav>
-      <nav>
-        <Link to="/contact">Contact </Link>
-      </nav>
-    </navbar>
+    </header>
   )
 }
 

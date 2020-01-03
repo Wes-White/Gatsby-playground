@@ -1,12 +1,15 @@
 import React from "react"
 import Nav from "../components/navagation"
 import Footer from "../components/footer"
-import "../styles/index.scss"
+import layoutStyles from "./layout.module.scss"
 const Layout = props => {
   return (
-    <div>
-      <Nav />
-      {props.children}
+    <div className={layoutStyles.container}>
+      <div className={layoutStyles.content}>
+        <Nav />
+        {props.children}
+      </div>
+
       <Footer />
     </div>
   )

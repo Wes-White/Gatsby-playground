@@ -5,5 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: "Gatsby Playground",
+    author: "Wesley White",
+  },
   plugins: [`gatsby-plugin-sass`],
 }
