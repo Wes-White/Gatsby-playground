@@ -1,11 +1,9 @@
 import React from "react"
-import Nav from "../components/navagation"
-import Footer from "../components/footer"
+import Layout from "../components/layout"
 
 const ContactPage = () => {
   return (
-    <div>
-      <Nav />
+    <Layout>
       <h1>Contact Us</h1>
       <p>we love hearing from you </p>
       <form style={{ dispaly: `flex`, flexDirection: `column` }}>
@@ -14,8 +12,7 @@ const ContactPage = () => {
         <input placeholder="Phone number"></input>
         <textarea placeholder="Message"></textarea>
       </form>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 

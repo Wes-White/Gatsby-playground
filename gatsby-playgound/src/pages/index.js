@@ -1,16 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
-import Nav from "../components/navagation"
-import Footer from "../components/footer"
+import Layout from "../components/layout"
 
 const IndexPage = () => {
   return (
-    <div>
-      <Nav />
+    <Layout>
       <h1>Hello</h1>
       <h2>
         I'm' Wesley, a full stack developer living on the beautiful Big Island
-        of Hawaii
+        of Hawaii.
       </h2>
       <p>
         Follow me on Twitter
@@ -21,8 +19,7 @@ const IndexPage = () => {
       <p>
         Need a developer?<Link to="/contact">Contact me.</Link>
       </p>
-      <Footer />
-    </div>
+    </Layout>
   )
 }
 
