@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
+import Nav from "../components/navagation"
 import Footer from "../components/footer"
 
 const IndexPage = () => {
   return (
     <div>
-      <Link to="/about">About page</Link>
+      <Nav />
       <h1>Hello</h1>
       <h2>
         I'm' Wesley, a full stack developer living on the beautiful Big Island

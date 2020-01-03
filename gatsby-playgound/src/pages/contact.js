@@ -1,11 +1,11 @@
 import React from "react"
-import { Link } from "gatsby"
+import Nav from "../components/navagation"
 import Footer from "../components/footer"
 
 const ContactPage = () => {
   return (
     <div>
-      <Link to="/">Home</Link>
+      <Nav />
       <h1>Contact Us</h1>
       <p>we love hearing from you </p>
       <form style={{ dispaly: `flex`, flexDirection: `column` }}>

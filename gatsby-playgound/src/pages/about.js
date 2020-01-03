@@ -1,11 +1,12 @@
 import React from "react"
 import { Link } from "gatsby"
+import Nav from "../components/navagation"
 import Footer from "../components/footer"
 
 const AboutPage = () => {
   return (
     <div>
-      <Link to="/">Home</Link>
+      <Nav />
       <h1>About Page</h1>
       <p>This is my bio page. Here is some stuff about me. </p>
 
