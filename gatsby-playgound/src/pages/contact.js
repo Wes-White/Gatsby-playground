@@ -1,5 +1,6 @@
 import React from "react"
 import { Link } from "gatsby"
+import Footer from "../components/footer"
 
 const ContactPage = () => {
   return (
@@ -13,6 +14,7 @@ const ContactPage = () => {
         <input placeholder="Phone number"></input>
         <textarea placeholder="Message"></textarea>
       </form>
+      <Footer />
     </div>
   )
 }
